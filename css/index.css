@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+@import 'animate.css';
+
+
+:root{
+    --fondo_menu: rgba(0, 0, 0, 0.9);
+    --font: white;
+}
+
+
+
+
+
 
 *{
     padding: 0px;
@@ -10,11 +22,12 @@
 
 body{
     height: 300vh;
-    background: -moz-linear-gradient(45deg,rgba(79, 79, 236),rgb(163, 27, 218, 0.9));
+    background: -moz-linear-gradient(45deg, rgba(79, 79, 236, 0.9),rgba(163, 27, 218, 0.9));
+
 }
 
 .header{
-    height: 85vh;
+    height: 90vh;
     background-image:url(/img/fotoPerfil.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -28,6 +41,7 @@ body{
 }
 
 /* animasion del fondo */
+/* 
 @keyframes float1 {
     0%{transform: translate(0, 20)}
     50%{transform: translate(-20px, 10px)}
@@ -56,26 +70,35 @@ body{
 
 .triangle-float3 {
     animation: float3 6s infinite;
-}
+} */
 
 
 
 
 
 .container_foto_perfil {
-    position: absolute;
-  left: 40px;
+  position: absolute;
+  right:  1em;
 
  
 }
 
+header:hover .container_foto_perfil .foto_perfil{
+
+  animation: flip; 
+  animation-duration: 2s;
+
+  
+  
+}
 
 .foto_perfil{
-width: 10rem;
-height: 10rem;
-object-fit: cover;
-border-radius: 50%;
-border: solid 2px blue ;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 2px blue ;
+  
 
 }
 
@@ -87,13 +110,13 @@ border: solid 2px blue ;
     vertical-align: text-top;
     line-height: 70vh;
     font-size: 1rem;
-    color: white;
+    color: var(--font);
    
 }
 
 .nav{
-    background-color: black;
-    height: 80px;
+    background-color: var(--fondo_menu);
+    height: 3em;
     display: flex;
     align-items: center;
     justify-content: center;

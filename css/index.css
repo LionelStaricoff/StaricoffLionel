@@ -280,4 +280,9 @@ header:hover .container_foto_perfil .foto_perfil{
     top: 0;
     z-index: 2;
 }
+
+.relleno{
+    width: 100vmax;
+    margin: 1em 0;
+}
  }

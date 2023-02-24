@@ -190,10 +190,24 @@ header:hover .container_foto_perfil .foto_perfil{
         background-color: rgba(40, 230, 230,0.6);
     }
   
+footer{
+    display: flex;
+    margin: 0.5em;
+    justify-content: space-between;
 
+}
 
+footer  i{
+    font-size: 1,5rem;
+    width: 50%;
+    text-align: center;
+}
 
-
+footer  img{
+    width: 2em;
+  
+  
+}
 
 
 

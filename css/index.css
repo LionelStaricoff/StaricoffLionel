@@ -37,15 +37,30 @@ body{
 .title {
     font-size: 1rem;
     color: var(--font);
+    display: grid;
 }
 
-.title > h1{
-    margin: 1em;
+.title > h1 {
+   margin: 1em;
     text-align: center;
+    text-shadow: 7px 7px 7px  rgb(14, 12, 12);
 }
 
 .title >p{
-    margin-left: 1em;
+    text-align: center;
+}
+
+.title > h2 {
+    margin: 2em 1em;
+    align-self: center;
+    justify-self: center;
+
+}
+.title > .comentarios{
+ 
+    width: 60%;
+    align-self: center;
+    justify-self: center;
 }
 .header{
     height: 100vh;
@@ -194,7 +209,7 @@ footer  img{
 
 
 
- @media(max-width: 560px){
+ @media only screen and (max-width: 800px){
      
  
      .menu{
@@ -239,6 +254,7 @@ footer  img{
 .icon{
     pointer-events: none;
     font-size: 1em;
+ 
 }
 .checkbox{
       opacity: 0;  
@@ -278,4 +294,16 @@ footer  img{
     width: 100vmax;
     margin: 1em 0;
 }
+ 
+
+.title > .comentarios{
+    width: 60%;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+
+
+
+
  }

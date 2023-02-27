@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
 @import 'animate.css';
-
+@import '/css/button_style.css';
 
 :root{
     --fondo_menu: rgba(243, 99, 99, 0.9);

@@ -7,7 +7,7 @@
     height: 3em;
      display: flex; 
     align-content: center;
-    justify-content: space-between; 
+    justify-content: space-around; 
     padding: .1em;
 
     position: sticky;
@@ -19,7 +19,9 @@
     height: 100%;
 }
 
-
+.checkbox, .amb, .x{
+   display: none;
+}
 .nav_container{
     background-color: var(--fondo_menu);
     height: 3em;
@@ -43,7 +45,7 @@
      padding: 0.3em ;
      margin: 0 0.1em;
      height: 100%;
-     /* width: 5em; */
+  
 }
 
 .menu{
@@ -51,29 +53,46 @@
     z-index: 1;
     display: flex;
     justify-content: space-between;
-    width: 100vh;
+    flex-direction: row;
+    width: 30em;
    
      
         
    
 }
 
+/* menu sol y luna */
 .menu a:hover{
         background-color: rgba(40, 230, 230,0.6);
     }
 
 .custom_menu{
-    background-color: rgba(138, 44, 226, 0.8);
+    background-color: rgba(138, 44, 226, 0.4);
     border-radius: 10px;
     text-align: center;
+
 
 }
 
 .custom_menu:hover{
-    background-color: rgba(122, 226, 81, 0.5);
+    background-color: rgba(138, 44, 226, 0.8);
    
 
 }
+
+label> p{
+   display: none;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -83,7 +102,7 @@
      
  
     .menu{
-  
+       height: 90vh;
        width:100%;
        position: absolute;
        z-index: -1;
@@ -100,11 +119,29 @@
     
 
    }
+   label> p{
+      display: inline;
+   }
    
-   
-   
-   
-   
+   .nav_link{
+     display: grid;
+     place-content: center;
+   }
+   .nav_link input{
+     width: 10em;
+     height: 3em;
+   }
+
+
+
+
+
+
+
+
+
+
+   /* menu option */
    
    .checkbox:checked ~ .menu{
        transform: translateX(30em);
@@ -175,7 +212,9 @@
 }
 
 
-
+.menu_stiky{
+   justify-content: space-between;
+}
 
 
 }

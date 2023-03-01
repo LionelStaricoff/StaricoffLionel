@@ -1,0 +1,181 @@
+
+
+
+
+.menu_stiky{
+    background-color: var(--fondo_menu);
+    height: 3em;
+     display: flex; 
+    align-content: center;
+    justify-content: space-between; 
+    padding: .1em;
+
+    position: sticky;
+    top: 0;
+}
+.menu_stiky_hijo{
+    /* background-color: blue; */
+    width: 5em;
+    height: 100%;
+}
+
+
+.nav_container{
+    background-color: var(--fondo_menu);
+    height: 3em;
+     display: flex; 
+    align-content: center;
+    justify-content: space-between; 
+    padding: .1em;
+
+    position: sticky;
+    top: 0;
+}
+
+
+
+.nav_link{
+    font-size: 1.3rem;
+    text-decoration: none;
+     color: inherit;
+     background-color: rgba(40, 230, 230,0.3);
+     display: block;
+     padding: 0.3em ;
+     margin: 0 0.1em;
+     height: 100%;
+     /* width: 5em; */
+}
+
+.menu{
+  
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    width: 100vh;
+   
+     
+        
+   
+}
+
+.menu a:hover{
+        background-color: rgba(40, 230, 230,0.6);
+    }
+
+.custom_menu{
+    background-color: rgba(138, 44, 226, 0.8);
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.custom_menu:hover{
+    background-color: rgba(122, 226, 81, 0.5);
+   
+
+}
+
+
+
+
+
+ @media only screen and (max-width: 800px){
+     
+ 
+    .menu{
+  
+       width:100%;
+       position: absolute;
+       z-index: -1;
+       top: 2.7em;
+       right: 0em; 
+       padding-top: 0.3em;
+       display: flex;
+       flex-direction: column;
+       transform: translateX(0em);
+       transition: 0.5s;
+ 
+       place-content: center;
+      
+    
+
+   }
+   
+   
+   
+   
+   
+   
+   .checkbox:checked ~ .menu{
+       transform: translateX(30em);
+       transition: 0.3s;
+       
+   }
+
+/* colocar el checkobs y las imagenes del mismo tamaño */
+.checkbox, .icon{
+    display: block;
+   height: 3em;
+   width: 3em;
+   /* position: absolute; */
+   top: -0.1em;
+   right: 1em;
+   cursor: pointer;
+   border: 1px solid black;
+}
+
+/* es para que no le haga caso a las imagenes y si al check */
+.icon{
+   pointer-events: none;
+   font-size: 1em;
+
+}
+.checkbox{
+     opacity: 0;  
+}
+
+.checkbox:checked ~ .amb{
+   display: none;
+}
+
+.x{
+   display: none;
+}
+
+.checkbox:checked ~ .x{
+   display: block;
+}
+
+.nav_link{
+   text-align: center;
+}
+
+
+.nav_container{
+   background-color: var(--fondo_menu);
+   height: 3em;
+   position: sticky;
+   top: 0;
+   z-index: 2;
+
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+}
+
+.relleno{
+   width: 100vmax;
+   margin: 1em 0;
+}
+
+
+.title > .comentarios{
+   width: 60%;
+   align-self: center;
+   justify-self: flex-start;
+}
+
+
+
+
+
+}

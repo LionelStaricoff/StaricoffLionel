@@ -21,7 +21,7 @@
 
 
 body{
-    height: 300vh;
+    height: 100%;
     background: -moz-linear-gradient(45deg, rgba(79, 79, 236, 0.9),rgba(163, 27, 218, 0.9));
 
 }
@@ -106,16 +106,35 @@ header:hover .container_foto_perfil .foto_perfil{
 }
 
 
+.menu_stiky{
+    background-color: var(--fondo_menu);
+    height: 3em;
+     display: flex; 
+    align-content: center;
+    justify-content: space-between; 
+    padding: .1em;
 
-
+    position: sticky;
+    top: 0;
+}
+.menu_stiky_hijo{
+    background-color: blue;
+    width: 5em;
+    height: 100%;
+}
+.menu_stiky_hijo{
+    background-color: blue;
+    width: 5em;
+    height: 100%;
+}
 
 .nav_container{
     background-color: var(--fondo_menu);
     height: 3em;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 1rem;
+     display: flex; 
+    align-content: center;
+    justify-content: space-between; 
+    padding: .1em;
 
     position: sticky;
     top: 0;
@@ -129,10 +148,11 @@ header:hover .container_foto_perfil .foto_perfil{
      color: inherit;
      background-color: rgba(40, 230, 230,0.3);
      display: block;
-     padding: 0.3em 1em;
+     padding: 0.3em ;
      margin: 0 0.1em;
+     height: 100%;
+     /* width: 5em; */
 }
-
 
 
 .main{
@@ -214,17 +234,21 @@ footer  img{
  
      .menu{
    
-        width:100vh;
+        width:100%;
         position: absolute;
         z-index: -1;
         top: 2.7em;
-        right: 30em; 
+        right: 0em; 
         padding-top: 0.3em;
         display: flex;
         flex-direction: column;
         transform: translateX(0em);
         transition: 0.5s;
-      
+  
+        place-content: center;
+       
+        /* background-color: blueviolet; */
+
     }
     
     
@@ -280,14 +304,18 @@ footer  img{
 .nav_container{
     background-color: var(--fondo_menu);
     height: 3em;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 1rem;
+    /* display: flex; */
+    /* margin: auto; */
+    /* align-items: center;
+    justify-content: center; */
+    /* gap: 1rem; */
 
     position: sticky;
     top: 0;
     z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 
 .relleno{

@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
-@import 'animate.css';
 @import '/css/button_style.css';
 @import 'menu.css';
+@import '/css/main.css';
 
 :root{
-    --fondo_menu: rgba(243, 99, 99, 0.9);
+    --fondo_menu: rgba(47, 218, 203, 0.5);
     --font: white;
 }
 
@@ -17,7 +17,8 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-   font-family: julee, Arial, Helvetica, sans-serif;
+    font-family: julee, Arial, Helvetica, sans-serif;
+    font-size: 100%;
 }
 
 
@@ -77,17 +78,18 @@ body{
   position: absolute;
   right:  1em;
   top: 40%;
-  z-index: 1;
- 
+  z-index: -1;
+ animation: foto 10s 2 ;
 }
 
-header:hover .container_foto_perfil .foto_perfil{
+@keyframes foto {
+    0% {top: 40%; right:1em;}
+    20% {top:0%;  right: 30%;}
+    40% {top: 40%;  right: 60%;}
+    60% {top:10%;  right: 70%;}
+    80% {top:0%;  right: 0em;}
+    100% {top:40%;  right:1em;}
 
-  animation: flip; 
-  animation-duration: 2s;
-
-  
-  
 }
 
 .foto_perfil{
@@ -96,31 +98,25 @@ header:hover .container_foto_perfil .foto_perfil{
   object-fit: cover;
   border-radius: 50%;
   border: solid 2px blue ;
-  
+  animation: foto2 10s 2 ;
 
 }
 
 
-.main{
-  
+@keyframes foto2 {
+    0% {height: 10rem;width: 10rem;}
+    20% {height: 5rem;width: 5rem;}
+    22% {height: 5rem;width: 10rem;}
+    25% {height: 10rem; width: 5em;}
+    40% {height: 10rem;width: 10rem;}
+    42% {height: 5rem;width: 10rem;}
+    45% {height: 10rem;width: 7rem;}
+    60% {height: 10rem;width: 7rem;}
+    62% {height: 10rem;width: 4rem;}
+    80% {height: 10rem;width: 10rem;}
+    82% {height: 5rem;width: 10rem;}
+    100% {height: 10rem;width: 10rem;}
 
-
- overflow: hidden;
- display: flex;
- flex-wrap: wrap;
- align-items: center;
- justify-content: center;
-
-}
-
-
-.relleno{
-    width: 25rem;
-    height: 22rem;
-    border: solid 3px black;
-    background: radial-gradient(rgba(52, 245, 235), rgb(48, 128, 48,0.4));
-    margin: 1rem;
-    
 }
 
 

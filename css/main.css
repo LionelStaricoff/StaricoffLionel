@@ -1,0 +1,47 @@
+.main{
+  
+
+
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   
+   }
+   
+   
+   .relleno{
+       width: 25rem;
+       height: 22rem;
+       border: solid 3px black;
+       background: radial-gradient(rgba(52, 245, 235), rgb(48, 128, 48,0.4));
+       margin: 1rem;
+       border-radius: 10px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-around;
+       
+   }
+
+   picture img {
+       padding: 0.3em 0;
+       width: 3em;
+       border-radius: 30%;
+      box-shadow: 5px 2px 5px rgb(55, 134, 236) inset,
+                  5px 2px 5px rgb(55, 134, 236),
+                  -5px -2px 5px rgb(55, 134, 236) inset,
+                  5px 2px 5px rgb(55, 134, 236);
+         
+   }
+
+   .h2{
+       font-size: 2em;
+       text-shadow: 5px 5px 5px rgb(55, 134, 236);
+   }
+
+   main div p{
+       width: 80%;
+       text-shadow: 5px 5px 5px rgb(55, 134, 236);
+   }

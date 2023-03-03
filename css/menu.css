@@ -5,23 +5,22 @@
 .menu_stiky{
     background-color: var(--fondo_menu);
     height: 3em;
+    width: 100%;
      display: flex; 
     align-content: center;
-    justify-content: space-around; 
+    /* justify-content: space-around;  */
     padding: .1em;
 
     position: sticky;
     top: 0;
+    box-shadow: 5px 10px 8px rgba(24, 11, 11, 0.5);
 }
-.menu_stiky_hijo{
-    /* background-color: blue; */
+.menu_stiky_hijo, .button menu_stiky_hijo{
     width: 5em;
-    height: 100%;
+    height: 90%;
 }
 
-.checkbox, .amb, .x{
-   display: none;
-}
+
 .nav_container{
     background-color: var(--fondo_menu);
     height: 3em;
@@ -45,53 +44,59 @@
      padding: 0.3em ;
      margin: 0 0.1em;
      height: 100%;
-  
+     
 }
 
+ .nav_link .span{
+   position: relative;
+   left: 80vh;
+  
+} 
+
+.nav_link span:hover{
+   width: 4em;
+  box-shadow: 5px 10px 8px black;
+} 
+
+
+
+.inicio{
+   padding-left: 3em;
+ 
+}
+
+.nav_link input{ 
+   display: inline-block;
+
+}
 .menu{
   
+   position: absolute;
     z-index: 1;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
     width: 30em;
-   
-     
-        
+    height: 100%;
    
 }
 
-/* menu sol y luna */
-.menu a:hover{
-        background-color: rgba(40, 230, 230,0.6);
-    }
+
 
 .custom_menu{
-    background-color: rgba(138, 44, 226, 0.4);
-    border-radius: 10px;
+  opacity: 100%;
     text-align: center;
 
-
 }
 
-.custom_menu:hover{
-    background-color: rgba(138, 44, 226, 0.8);
-   
 
-}
 
 label> p{
    display: none;
 }
 
-
-
-
-
-
-
-
-
+.checkbox{
+   display: none;
+} 
 
 
 
@@ -100,48 +105,59 @@ label> p{
 
  @media only screen and (max-width: 800px){
      
+.menu_stiky{
+   background-color: var(--fondo_menu);
+   height: 3em;
+    display: flex; 
+   align-content: center;
+   justify-content: space-between; 
+   padding: .1em;
+
+   position: sticky;
+   top: 0;
+   box-shadow: 5px 10px 8px rgba(24, 11, 11, 0.5);
+}
  
     .menu{
-       height: 90vh;
+  
+      height: 90vh;
        width:100%;
        position: absolute;
        z-index: -1;
-       top: 2.7em;
+       top: 1em;
        right: 0em; 
-       padding-top: 0.3em;
+       padding-top: 1.6em;
        display: flex;
        flex-direction: column;
        transform: translateX(0em);
        transition: 0.5s;
  
-       place-content: center;
-      
-    
+       
+     
 
    }
+   .custom_menu{
+      background-color: rgba(87, 240, 232, 0.4);
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 5px 10px 8px rgb(24, 11, 11);
+  
+  }
+  .custom_menu:hover{
+   background-color:  rgba(87, 240, 232, 0.8);
+
+}
+
+.menu a:hover{
+   background-color: rgba(40, 230, 230,0.6);
+   box-shadow: 5px 10px 8px rgb(24, 11, 11);
+}
+
    label> p{
-      display: inline;
+      display: inline-block;
    }
    
-   .nav_link{
-     display: grid;
-     place-content: center;
-   }
-   .nav_link input{
-     width: 10em;
-     height: 3em;
-   }
-
-
-
-
-
-
-
-
-
-
-   /* menu option */
+   
    
    .checkbox:checked ~ .menu{
        transform: translateX(30em);
@@ -149,55 +165,51 @@ label> p{
        
    }
 
-/* colocar el checkobs y las imagenes del mismo tamaño */
-.checkbox, .icon{
-    display: block;
-   height: 3em;
-   width: 3em;
-   /* position: absolute; */
-   top: -0.1em;
-   right: 1em;
-   cursor: pointer;
-   border: 1px solid black;
-}
 
-/* es para que no le haga caso a las imagenes y si al check */
-.icon{
-   pointer-events: none;
-   font-size: 1em;
-
-}
 .checkbox{
      opacity: 0;  
 }
 
-.checkbox:checked ~ .amb{
-   display: none;
+
+
+.nav_link .span{
+   position: initial;
+  
 }
 
-.x{
-   display: none;
+
+.nav_link span{
+   margin-top: 2em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
 }
 
-.checkbox:checked ~ .x{
+.inicio{
+   padding-left: 0em;
+ 
+}
+
+.lavel_logo{
    display: block;
+   height: 100%;
+   background-image: url(/svg/LOGO_S&L.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   border: 1px solid black;
+   box-shadow: 5px 10px 8px rgb(24, 11, 11);
 }
 
-.nav_link{
-   text-align: center;
+
+ 
+
+
+.checkbox:checked ~ .lavel_logo{
+   background-image: url(/svg/LOGO_AW.svg);
 }
 
-
-.nav_container{
-   background-color: var(--fondo_menu);
-   height: 3em;
-   position: sticky;
-   top: 0;
-   z-index: 2;
-
-   display: grid;
-   grid-template-columns: repeat(3,1fr);
-}
 
 .relleno{
    width: 100vmax;
@@ -212,9 +224,7 @@ label> p{
 }
 
 
-.menu_stiky{
-   justify-content: space-between;
-}
+
 
 
 }

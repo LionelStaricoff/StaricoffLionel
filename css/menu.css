@@ -42,7 +42,7 @@
      background-color: rgba(40, 230, 230,0.3);
      display: block;
      padding: 0.3em ;
-     margin: 0 0.1em;
+     margin: 0 0.5em;
      height: 100%;
      
 }
@@ -53,10 +53,10 @@
   
 } 
 
-.nav_link span:hover{
+/* .nav_link span:hover{
    width: 4em;
   box-shadow: 5px 10px 8px black;
-} 
+}  */
 
 
 
@@ -98,7 +98,10 @@ label> p{
    display: none;
 } 
 
-
+.lbl_switch{
+   opacity: 50%;
+   box-shadow: 5px 5px 5px ;
+}
 
 
 
@@ -140,7 +143,9 @@ label> p{
       background-color: rgba(87, 240, 232, 0.4);
       border-radius: 10px;
       text-align: center;
-      box-shadow: 5px 10px 8px rgb(24, 11, 11);
+      box-shadow: 5px 5px 5px ;
+      height: 2.6em;
+     
   
   }
   .custom_menu:hover{
@@ -199,7 +204,7 @@ label> p{
    background-position: center;
    background-size: cover;
    border: 1px solid black;
-   box-shadow: 5px 10px 8px rgb(24, 11, 11);
+   box-shadow: 5px 5px 5px ;
 }
 
 
